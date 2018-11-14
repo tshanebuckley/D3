@@ -1,0 +1,37 @@
+<html>
+	<head></head>
+	<body>
+		<table>
+			<tr>
+				<% i = sp %>
+				<% while i >0 %>
+					<th> <%= i -1 %> </th>
+					<% i = i - 1 %>
+				<% end %>
+				<th>AND </th>
+				<th>OR </th>
+				<th>XOR </th>
+			</tr>
+			<% x = 2**(sp) %>
+			<% i = 0 %>
+			<% while i < x %>
+				<tr>
+					<% y = sp + 3%>
+					<% j = 0 %>
+					<% while j < y %>
+						<td>
+							<% if table[i][j] == "0" %>
+								<%= fp %>
+							<% else %>
+								<%= tp %>
+							<% end %>
+						</td>
+						<% j = j + 1 %>
+					<% end %>
+				</tr>
+				<% i = i + 1 %>
+			<% end %>
+		</table>
+		<p> <a href="/"> Back to main </a> <p/>
+	</body>
+</html>
